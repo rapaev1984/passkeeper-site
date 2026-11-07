@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PassKeeper — менеджер паролей для Android и Windows</title>
 <meta name="description" content="PassKeeper: надёжное хранение паролей. Шифрование на устройстве, биометрия, синхронизация через ваш Google Drive, быстрое копирование из шторки. Бесплатно.">
+<link rel="icon" type="image/png" sizes="192x192" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
 <style>
   :root {
     --bg: #0f1420; --card: #1a2233; --text: #e8ecf4; --muted: #9aa7bd;
@@ -17,6 +19,10 @@
   }
   .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
   header { padding: 48px 0 32px; text-align: center; }
+  .hero-icon {
+    width: 96px; height: 96px; border-radius: 24px; margin-bottom: 14px;
+    box-shadow: 0 8px 28px rgba(79, 140, 255, .28);
+  }
   .logo { font-size: 40px; font-weight: 800; letter-spacing: .5px; }
   .logo span { color: var(--accent); }
   .tagline { color: var(--muted); font-size: 18px; margin: 12px auto 24px; max-width: 560px; }
@@ -45,6 +51,7 @@
 </head>
 <body>
 <header class="wrap">
+  <img class="hero-icon" src="icon.png" alt="Иконка PassKeeper" width="96" height="96">
   <div class="logo">Pass<span>Keeper</span></div>
   <p class="tagline">Менеджер паролей, который хранит всё на вашем устройстве:
      зашифровано, без подписок и без передачи данных на чужие серверы.</p>
