@@ -58,8 +58,10 @@ user data on its own resources.</p>
 <p>The cloud safe feature works <b>only upon an explicit user action</b>
 (connecting a cloud safe). In that case the App:</p>
 <ul>
-  <li>gets access to the user's Google Drive limited to storing safe files in the
-      PassKeeper folder of the user's own Drive;</li>
+  <li>gets limited access to the user's Google Drive under the drive.file
+      permission: the App can access only the files and folders it created itself
+      to store the encrypted PassKeeper safes. The App cannot view, modify, or
+      delete any of the user's other personal files on their Google Drive;</li>
   <li>transfers encrypted safe files between the user's device and the user's own
       Google Drive — <b>never to the operator's resources</b>;</li>
   <li>uses Google data for no purpose other than providing the sync feature, and
