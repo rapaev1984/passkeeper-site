@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PassKeeper — менеджер паролей для Android и Windows</title>
+<meta name="description" content="PassKeeper: надёжное хранение паролей. Шифрование на устройстве, биометрия, синхронизация через ваш Google Drive, быстрое копирование из шторки. Бесплатно.">
+<style>
+  :root {
+    --bg: #0f1420; --card: #1a2233; --text: #e8ecf4; --muted: #9aa7bd;
+    --accent: #4f8cff; --accent-2: #7aa8ff; --radius: 16px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.6;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+  header { padding: 48px 0 32px; text-align: center; }
+  .logo { font-size: 40px; font-weight: 800; letter-spacing: .5px; }
+  .logo span { color: var(--accent); }
+  .tagline { color: var(--muted); font-size: 18px; margin: 12px auto 24px; max-width: 560px; }
+  .btn {
+    display: inline-block; background: var(--accent); color: #fff;
+    padding: 14px 32px; border-radius: 999px; text-decoration: none;
+    font-weight: 700; font-size: 17px;
+  }
+  .btn:hover { background: var(--accent-2); }
+  .platforms { color: var(--muted); font-size: 14px; margin-top: 10px; }
+  h2 { font-size: 26px; margin: 40px 0 20px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--card); border-radius: var(--radius); padding: 20px 22px;
+  }
+  .card h3 { font-size: 17px; margin-bottom: 8px; }
+  .card p { color: var(--muted); font-size: 14.5px; }
+  .shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+  .shots img {
+    width: 100%; border-radius: var(--radius); display: block;
+    border: 1px solid #2a3550;
+  }
+  footer { margin: 56px 0 40px; color: var(--muted); font-size: 14px; text-align: center; }
+  footer a { color: var(--accent-2); text-decoration: none; }
+</style>
+</head>
+<body>
+<header class="wrap">
+  <div class="logo">Pass<span>Keeper</span></div>
+  <p class="tagline">Менеджер паролей, который хранит всё на вашем устройстве:
+     зашифровано, без подписок и без передачи данных на чужие серверы.</p>
+  <!-- После публикации в RuStore заменить href на ссылку карточки приложения,
+       например: https://apps.rustore.ru/app/ru.pkeeper.passkeeper -->
+  <a class="btn" href="#">Скачать в RuStore</a>
+  <p class="platforms">Android (RuStore) · Windows</p>
+</header>
+
+<main class="wrap">
+  <h2>Возможности</h2>
+  <div class="grid">
+    <div class="card"><h3>🔒 Шифрование на устройстве</h3>
+      <p>Сейф — зашифрованная база (AES, ключ из мастер-пароля, PBKDF2).
+         Никто, кроме вас, не расшифрует содержимое.</p></div>
+    <div class="card"><h3>🔐 Биометрия</h3>
+      <p>Вход в сейф по отпечатку пальца — быстро и без ввода пароля.</p></div>
+    <div class="card"><h3>☁️ Синхронизация через ваш Drive</h3>
+      <p>Облачный сейф живёт в вашем Google Drive: данные ходят между
+         вашими устройствами, минуя серверы разработчика.</p></div>
+    <div class="card"><h3>⚡ Быстрое копирование</h3>
+      <p>Уведомление в шторке копирует логин или пароль одним касанием,
+         с автоочисткой буфера обмена.</p></div>
+    <div class="card"><h3>🧠 Мнемонические пароли</h3>
+      <p>Генератор придумывает связную фразу на русском и собирает из неё
+         надёжный пароль — легко запомнить, сложно подобрать.</p></div>
+    <div class="card"><h3>🗂 Папки, корзина, CSV</h3>
+      <p>Папки и эмодзи-иконки, корзина с восстановлением, импорт из CSV
+         браузерных менеджеров.</p></div>
+    <div class="card"><h3>🔄 Передача между устройствами</h3>
+      <p>QR-код или файл .pkshare — перенесите сейф на новое устройство
+         без облака.</p></div>
+    <div class="card"><h3>⏱ Автоблокировка</h3>
+      <p>Блокировка по таймеру, при уходе в фон и при выключении экрана —
+         данные не остаются без присмотра.</p></div>
+  </div>
+
+  <h2>Скриншоты</h2>
+  <div class="shots">
+    <img src="screenshots/01-reestr-svetlaya.png" alt="Реестр сейфов" loading="lazy">
+    <img src="screenshots/02-karta-uvedomlenie.png" alt="Карточка пароля и уведомление быстрого копирования" loading="lazy">
+    <img src="screenshots/03-generator.png" alt="Генератор мнемонических паролей" loading="lazy">
+    <img src="screenshots/04-nastroyki.png" alt="Настройки приложения" loading="lazy">
+    <img src="screenshots/05-seif-temnaya.png" alt="Открытый сейф в тёмной теме" loading="lazy">
+  </div>
+</main>
+
+<footer class="wrap">
+  <p><a href="privacy.html">Политика конфиденциальности</a></p>
+  <p>Поддержка: rapaev.vl@mail.ru · © 2026 PassKeeper</p>
+</footer>
+</body>
+</html>
