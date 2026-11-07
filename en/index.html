@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PassKeeper — password manager for Android and Windows</title>
+<meta name="description" content="PassKeeper: secure password storage. On-device encryption, biometric unlock, sync via your own Google Drive, quick copy from the notification shade. Free.">
+<link rel="icon" type="image/png" sizes="192x192" href="../icon.png">
+<link rel="apple-touch-icon" href="../icon.png">
+<link rel="alternate" hreflang="ru" href="https://pkeeper.ru/">
+<link rel="alternate" hreflang="en" href="https://pkeeper.ru/en/">
+<link rel="canonical" href="https://pkeeper.ru/en/">
+<style>
+  :root {
+    --bg: #0f1420; --card: #1a2233; --text: #e8ecf4; --muted: #9aa7bd;
+    --accent: #4f8cff; --accent-2: #7aa8ff; --radius: 16px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.6;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+  header { padding: 48px 0 32px; text-align: center; position: relative; }
+  .lang { position: absolute; top: 0; right: 0; font-size: 14px; }
+  .lang a { color: var(--muted); text-decoration: none; padding: 6px 10px;
+            border: 1px solid #2a3550; border-radius: 999px; }
+  .lang b { color: var(--text); padding: 6px 10px;
+            border: 1px solid var(--accent); border-radius: 999px; }
+  .hero-icon {
+    width: 96px; height: 96px; border-radius: 24px; margin-bottom: 14px;
+    box-shadow: 0 8px 28px rgba(79, 140, 255, .28);
+  }
+  .logo { font-size: 40px; font-weight: 800; letter-spacing: .5px; }
+  .logo span { color: var(--accent); }
+  .tagline { color: var(--muted); font-size: 18px; margin: 12px auto 24px; max-width: 560px; }
+  .btn {
+    display: inline-block; background: var(--accent); color: #fff;
+    padding: 14px 32px; border-radius: 999px; text-decoration: none;
+    font-weight: 700; font-size: 17px;
+  }
+  .btn:hover { background: var(--accent-2); }
+  .platforms { color: var(--muted); font-size: 14px; margin-top: 10px; }
+  h2 { font-size: 26px; margin: 40px 0 20px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--card); border-radius: var(--radius); padding: 20px 22px;
+  }
+  .card h3 { font-size: 17px; margin-bottom: 8px; }
+  .card p { color: var(--muted); font-size: 14.5px; }
+  .shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+  .shots img {
+    width: 100%; border-radius: var(--radius); display: block;
+    border: 1px solid #2a3550;
+  }
+  footer { margin: 56px 0 40px; color: var(--muted); font-size: 14px; text-align: center; }
+  footer a { color: var(--accent-2); text-decoration: none; }
+</style>
+</head>
+<body>
+<header class="wrap">
+  <div class="lang"><a href="../">RU</a> · <b>EN</b></div>
+  <img class="hero-icon" src="../icon.png" alt="PassKeeper icon" width="96" height="96">
+  <div class="logo">Pass<span>Keeper</span></div>
+  <p class="tagline">A password manager that keeps everything on your device:
+     encrypted, no subscriptions, no data sent to anyone else's servers.</p>
+  <!-- After the RuStore publication, replace href with the store listing link,
+       e.g. https://apps.rustore.ru/app/ru.pkeeper.passkeeper -->
+  <a class="btn" href="#">Get it on RuStore</a>
+  <p class="platforms">Android (RuStore) · Windows</p>
+</header>
+
+<main class="wrap">
+  <h2>Features</h2>
+  <div class="grid">
+    <div class="card"><h3>🔒 On-device encryption</h3>
+      <p>A safe is an encrypted database (AES, key derived from your master
+         password with PBKDF2). Nobody but you can decrypt the contents.</p></div>
+    <div class="card"><h3>🔐 Biometric unlock</h3>
+      <p>Unlock your safe with a fingerprint — fast, no typing.</p></div>
+    <div class="card"><h3>☁️ Sync via your own Drive</h3>
+      <p>A cloud safe lives in your Google Drive folder: data travels between
+         your devices without touching the developer's servers.</p></div>
+    <div class="card"><h3>⚡ Quick copy</h3>
+      <p>A shade notification copies your login or password with one tap,
+         with automatic clipboard cleanup.</p></div>
+    <div class="card"><h3>🧠 Mnemonic passwords</h3>
+      <p>The generator invents a coherent phrase and turns it into a strong
+         password — easy to remember, hard to crack.</p></div>
+    <div class="card"><h3>🗂 Folders, trash, CSV</h3>
+      <p>Folders with emoji icons, trash with restore, import from browser
+         password CSVs.</p></div>
+    <div class="card"><h3>🔄 Transfer between devices</h3>
+      <p>QR code or a .pkshare file — move your safe to a new device without
+         the cloud.</p></div>
+    <div class="card"><h3>⏱ Auto-lock</h3>
+      <p>Locks on a timer, when backgrounded, and when the screen turns off —
+         your data is never left unattended.</p></div>
+  </div>
+
+  <h2>Screenshots</h2>
+  <div class="shots">
+    <img src="../screenshots/01-reestr-svetlaya.png" alt="Safes registry" loading="lazy">
+    <img src="../screenshots/02-karta-uvedomlenie.png" alt="Password card and quick-copy notification" loading="lazy">
+    <img src="../screenshots/03-generator.png" alt="Mnemonic password generator" loading="lazy">
+    <img src="../screenshots/04-nastroyki.png" alt="App settings" loading="lazy">
+    <img src="../screenshots/05-seif-temnaya.png" alt="Open safe in dark theme" loading="lazy">
+  </div>
+</main>
+
+<footer class="wrap">
+  <p><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></p>
+  <p>Support: rapaev.vl@mail.ru · © 2026 PassKeeper</p>
+</footer>
+</body>
+</html>
