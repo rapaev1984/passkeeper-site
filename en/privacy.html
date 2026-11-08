@@ -49,6 +49,7 @@ own and never collects or transmits your passwords or any other content to us.</
   <tr><td>Safe files on Google Drive</td><td>Not transmitted to the developer</td><td>By explicit user action: exchange happens only between the user's device and their own Drive (drive.file scope)</td></tr>
   <tr><td>Analytics, ads, trackers, telemetry</td><td>No</td><td>Not present in the App</td></tr>
   <tr><td>Email address</td><td>No</td><td>Only if the user writes to support themselves</td></tr>
+  <tr><td>Notification file from pkeeper.ru</td><td>No (no user data is transmitted)</td><td>On safe entry the App may request the emergency notification file — at most once per day; the server sees only the IP address and the request time</td></tr>
 </table>
 
 <h2>3. Operator</h2>
@@ -95,6 +96,10 @@ at the user's choice.</div>
       processed by Android and never handed to the App;</li>
   <li><b>Clipboard</b> — data copied from the App is automatically wiped on a
       configurable timer.</li>
+  <li><b>Internet access</b> — the only internet call the App makes without a
+      user action: requesting the emergency notification file from the
+      pkeeper.ru website (see the summary in section 2); Google Drive access
+      (section 5) happens only upon a user action.</li>
 </ul>
 
 <h2>7. What the App never does</h2>
