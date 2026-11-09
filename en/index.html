@@ -23,8 +23,10 @@
     background: var(--bg); color: var(--text); line-height: 1.6;
   }
   .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
-  header { padding: 48px 0 32px; text-align: center; position: relative; }
-  .lang { position: absolute; top: 0; right: 0; font-size: 14px; }
+  header { padding: 76px 0 32px; text-align: center; position: relative; }
+  .lang { position: absolute; top: 26px; right: 0; font-size: 14px; }
+  .lang select { background: var(--card); color: var(--text); font-size: 14px;
+                 padding: 6px 12px; border: 1px solid #2a3550; border-radius: 999px; cursor: pointer; }
   .lang a { color: var(--muted); text-decoration: none; padding: 6px 10px;
             border: 1px solid #2a3550; border-radius: 999px; }
   .lang b { color: var(--text); padding: 6px 10px;
@@ -62,7 +64,12 @@
 </head>
 <body>
 <header class="wrap">
-  <div class="lang"><a href="../">RU</a> · <b>EN</b></div>
+  <div class="lang">
+    <select onchange="if (this.value) location.href = this.value" aria-label="Language / Язык">
+      <option value="" selected>EN — English</option>
+      <option value="../">RU — Русский</option>
+    </select>
+  </div>
   <img class="hero-icon" src="../icon.png" alt="PassKeeper icon" width="96" height="96">
   <h1 class="logo">Pass<span>Keeper</span></h1>
   <p class="purpose">A free password manager for Android and Windows</p>
