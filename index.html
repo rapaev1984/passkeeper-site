@@ -50,6 +50,10 @@
                     font-size: 13.5px; text-align: left; }
   details.pp-note summary { cursor: pointer; color: var(--accent-2); }
   details.pp-note p { margin: 8px 0 0; }
+  .btn-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn-secondary { background: transparent; color: var(--accent);
+                   border: 2px solid var(--accent); padding: 12px 28px; }
+  .btn-secondary:hover { background: rgba(79, 140, 255, .12); }
   h2 { font-size: 26px; margin: 40px 0 20px; }
   .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
   .card {
@@ -81,13 +85,25 @@
      зашифровано, без подписок и без передачи данных на чужие серверы.</p>
   <!-- После публикации в RuStore заменить href на ссылку карточки приложения,
        например: https://apps.rustore.ru/app/ru.pkeeper.passkeeper -->
-  <a class="btn" href="#">Скачать в RuStore</a>
+  <div class="btn-row">
+    <a class="btn" href="#">Скачать в RuStore</a>
+    <a class="btn btn-secondary"
+       href="https://github.com/rapaev1984/passkeeper-releases/releases/latest/download/PassKeeper-windows.zip">Скачать для Windows</a>
+  </div>
   <p class="platforms">Android (RuStore) · Windows</p>
   <details class="pp-note">
     <summary>Если Google Play Защита предупреждает при установке</summary>
     <p>Это стандартный экран Android для приложений, установленных вне
     Google Play. Нажмите «Проверить» — сканирование пройдёт без замечаний.
     PassKeeper не собирает и никуда не отправляет ваши данные (см.
+    <a href="privacy.html">политику конфиденциальности</a>).</p>
+  </details>
+  <details class="pp-note">
+    <summary>Если Windows SmartScreen предупреждает при первом запуске</summary>
+    <p>Дистрибутив пока не подписан сертификатом подписи кода, поэтому
+    SmartScreen предупреждает о малоизвестных программах. Нажмите
+    «Подробнее» → «Выполнить в любом случае». PassKeeper не собирает
+    и никуда не отправляет ваши данные (см.
     <a href="privacy.html">политику конфиденциальности</a>).</p>
   </details>
 </header>
