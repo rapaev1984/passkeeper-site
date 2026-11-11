@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PassKeeper — password manager for Android and Windows</title>
-<meta property="og:title" content="PassKeeper — password manager">
-<meta property="og:description" content="Free password manager: on-device encryption, biometric unlock, sync via your own Google Drive.">
-<meta name="description" content="PassKeeper: secure password storage. On-device encryption, biometric unlock, sync via your own Google Drive, quick copy from the notification shade. Free.">
-<link rel="icon" type="image/png" sizes="192x192" href="../icon.png">
-<link rel="apple-touch-icon" href="../icon.png">
+<title>PassKeeper — менеджер паролей для Android и Windows</title>
+<meta property="og:title" content="PassKeeper — менеджер паролей">
+<meta property="og:description" content="Бесплатный менеджер паролей: шифрование на устройстве, биометрия, синхронизация через ваш Google Drive.">
+<meta name="description" content="PassKeeper: надёжное хранение паролей. Шифрование на устройстве, биометрия, синхронизация через ваш Google Drive, быстрое копирование из шторки. Бесплатно.">
+<link rel="icon" type="image/png" sizes="192x192" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
 <link rel="alternate" hreflang="ru" href="https://pkeeper.ru/">
 <link rel="alternate" hreflang="en" href="https://pkeeper.ru/en/">
-<link rel="canonical" href="https://pkeeper.ru/en/">
+<link rel="canonical" href="https://pkeeper.ru/">
 <style>
   :root {
     --bg: #0f1420; --card: #1a2233; --text: #e8ecf4; --muted: #9aa7bd;
@@ -75,91 +75,91 @@
 <body>
 <header class="wrap">
   <div class="lang">
-    <select onchange="if (this.value) location.href = this.value" aria-label="Language / Язык">
-      <option value="" selected>EN — English</option>
-      <option value="../">RU — Русский</option>
+    <select onchange="if (this.value) location.href = this.value" aria-label="Язык / Language">
+      <option value="" selected>RU — Русский</option>
+      <option value="en/">EN — English</option>
     </select>
   </div>
-  <img class="hero-icon" src="../icon.png" alt="PassKeeper icon" width="96" height="96">
+  <img class="hero-icon" src="icon.png" alt="Иконка PassKeeper" width="96" height="96">
   <h1 class="logo">Pass<span>Keeper</span></h1>
-  <p class="purpose">A free password manager for Android and Windows</p>
-  <p class="tagline">A password manager that keeps everything on your device:
-     encrypted, no subscriptions, no data sent to anyone else's servers.</p>
-  <!-- After the RuStore publication, replace href with the store listing link,
-       e.g. https://apps.rustore.ru/app/ru.pkeeper.passkeeper -->
+  <p class="purpose">Бесплатный менеджер паролей для Android и Windows</p>
+  <p class="tagline">Менеджер паролей, который хранит всё на вашем устройстве:
+     зашифровано, без подписок и без передачи данных на чужие серверы.</p>
+  <!-- После публикации в RuStore заменить href на ссылку карточки приложения,
+       например: https://apps.rustore.ru/app/ru.pkeeper.passkeeper -->
   <div class="btn-row">
-    <a class="btn" href="#">Get it on RuStore</a>
+    <a class="btn" href="#">Скачать в RuStore</a>
     <a class="btn btn-secondary"
-       href="https://github.com/rapaev1984/passkeeper-releases/releases/latest/download/PassKeeper-windows.zip">Download for Windows</a>
+       href="https://github.com/rapaev1984/passkeeper-releases/releases/latest/download/PassKeeper-windows.zip">Скачать для Windows</a>
   </div>
   <p class="platforms">Android (RuStore) · Windows</p>
   <details class="pp-note">
-    <summary>If Google Play Protect shows a warning during installation</summary>
-    <p>This is Android's standard screen for apps installed outside Google
-    Play. Tap «Проверить» (Verify) — the scan completes with no findings.
-    PassKeeper does not collect or send your data anywhere (see the
-    <a href="privacy.html">privacy policy</a>).</p>
+    <summary>Если Google Play Защита предупреждает при установке</summary>
+    <p>Это стандартный экран Android для приложений, установленных вне
+    Google Play. Нажмите «Проверить» — сканирование пройдёт без замечаний.
+    PassKeeper не собирает и никуда не отправляет ваши данные (см.
+    <a href="privacy.html">политику конфиденциальности</a>).</p>
   </details>
   <details class="pp-note">
-    <summary>If Windows SmartScreen warns on first launch</summary>
-    <p>The distribution is not code-signed yet, so SmartScreen flags
-    lesser-known programs. Click «Подробнее» (More info) →
-    «Выполнить в любом случае» (Run anyway). PassKeeper does not
-    collect or send your data anywhere (see the
-    <a href="privacy.html">privacy policy</a>).</p>
+    <summary>Если Windows SmartScreen предупреждает при первом запуске</summary>
+    <p>Дистрибутив пока не подписан сертификатом подписи кода, поэтому
+    SmartScreen предупреждает о малоизвестных программах. Нажмите
+    «Подробнее» → «Выполнить в любом случае». PassKeeper не собирает
+    и никуда не отправляет ваши данные (см.
+    <a href="privacy.html">политику конфиденциальности</a>).</p>
   </details>
 </header>
 
 <main class="wrap">
-  <h2>Features</h2>
+  <h2>Возможности</h2>
   <div class="grid">
-    <div class="card"><h3>🔒 On-device encryption</h3>
-      <p>A safe is an encrypted database (AES, key derived from your master
-         password with PBKDF2). Nobody but you can decrypt the contents.</p></div>
-    <div class="card"><h3>🔐 Biometric unlock</h3>
-      <p>Unlock your safe with a fingerprint — fast, no typing.</p></div>
-    <div class="card"><h3>☁️ Sync via your own Drive</h3>
-      <p>A cloud safe lives in your Google Drive folder: data travels between
-         your devices without touching the developer's servers.<sup>*</sup></p></div>
-    <div class="card"><h3>⚡ Quick copy</h3>
-      <p>A shade notification copies your login or password with one tap,
-         with automatic clipboard cleanup.</p></div>
-    <div class="card"><h3>🧠 Mnemonic passwords</h3>
-      <p>The generator invents a coherent phrase and turns it into a strong
-         password — easy to remember, hard to crack.</p></div>
-    <div class="card"><h3>🗂 Folders, trash, CSV</h3>
-      <p>Folders with emoji icons, trash with restore, import from browser
-         password CSVs.</p></div>
-    <div class="card"><h3>🔄 Card transfer</h3>
-      <p>QR code or a .pkshare file — move a password card to another
-         device without the cloud.</p></div>
-    <div class="card"><h3>⏱ Auto-lock</h3>
-      <p>Locks on a timer, when backgrounded, and when the screen turns off —
-         your data is never left unattended.</p></div>
+    <div class="card"><h3>🔒 Шифрование на устройстве</h3>
+      <p>Сейф — зашифрованная база (AES, ключ из мастер-пароля, PBKDF2).
+         Никто, кроме вас, не расшифрует содержимое.</p></div>
+    <div class="card"><h3>🔐 Биометрия</h3>
+      <p>Вход в сейф по отпечатку пальца — быстро и без ввода пароля.</p></div>
+    <div class="card"><h3>☁️ Синхронизация через ваш Drive</h3>
+      <p>Облачный сейф живёт в вашем Google Drive: данные ходят между
+         вашими устройствами, минуя серверы разработчика.<sup>*</sup></p></div>
+    <div class="card"><h3>⚡ Быстрое копирование</h3>
+      <p>Уведомление в шторке копирует логин или пароль одним касанием,
+         с автоочисткой буфера обмена.</p></div>
+    <div class="card"><h3>🧠 Мнемонические пароли</h3>
+      <p>Генератор придумывает связную фразу на русском и собирает из неё
+         надёжный пароль — легко запомнить, сложно подобрать.</p></div>
+    <div class="card"><h3>🗂 Папки, корзина, CSV</h3>
+      <p>Папки и эмодзи-иконки, корзина с восстановлением, импорт из CSV
+         браузерных менеджеров.</p></div>
+    <div class="card"><h3>🔄 Передача карточек</h3>
+      <p>QR-код или файл .pkshare — передайте карточку пароля
+         на другое устройство без облака.</p></div>
+    <div class="card"><h3>⏱ Автоблокировка</h3>
+      <p>Блокировка по таймеру, при уходе в фон и при выключении экрана —
+         данные не остаются без присмотра.</p></div>
   </div>
-  <p class="footnote"><sup>*</sup> We strongly advise against keeping your
-     safes in multiple Google accounts: PassKeeper is designed to work with a
-     single Google Drive, and switching between accounts slows down sign-in
-     and can confuse synchronization.</p>
+  <p class="footnote"><sup>*</sup> Мы крайне не рекомендуем хранить сейфы
+     в нескольких аккаунтах Google: PassKeeper рассчитан на работу с одним
+     Google Drive, а переключение между аккаунтами замедляет вход и может
+     запутать синхронизацию.</p>
 
-  <h2>Screenshots</h2>
+  <h2>Скриншоты</h2>
   <div class="shots">
-    <img src="../screenshots/01-reestr-svetlaya.png" alt="Safes registry" loading="lazy">
-    <img src="../screenshots/02-karta-uvedomlenie.png" alt="Password card and quick-copy notification" loading="lazy">
-    <img src="../screenshots/03-generator.png" alt="Mnemonic password generator" loading="lazy">
-    <img src="../screenshots/04-nastroyki.png" alt="App settings" loading="lazy">
-    <img src="../screenshots/05-seif-temnaya.png" alt="Open safe in dark theme" loading="lazy">
+    <img src="screenshots/01-reestr-svetlaya.png" alt="Реестр сейфов" loading="lazy">
+    <img src="screenshots/02-karta-uvedomlenie.png" alt="Карточка пароля и уведомление быстрого копирования" loading="lazy">
+    <img src="screenshots/03-generator.png" alt="Генератор мнемонических паролей" loading="lazy">
+    <img src="screenshots/04-nastroyki.png" alt="Настройки приложения" loading="lazy">
+    <img src="screenshots/05-seif-temnaya.png" alt="Открытый сейф в тёмной теме" loading="lazy">
   </div>
 </main>
 
 <footer class="wrap">
-  <p><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></p>
-  <p>🛠 PassKeeper is under active development — updates ship regularly.
-     Found a bug or have a suggestion? Write to
-     <a href="mailto:rapaev.vl@mail.ru">rapaev.vl@mail.ru</a> — we read
-     every message.</p>
+  <p><a href="privacy.html">Политика конфиденциальности</a> · <a href="terms.html">Пользовательское соглашение</a></p>
+  <p>🛠 PassKeeper в активной разработке — обновления выходят регулярно.
+     Нашли проблему или есть предложение? Напишите на
+     <a href="mailto:rapaev.vl@mail.ru">rapaev.vl@mail.ru</a> — мы читаем
+     каждое письмо.</p>
   <p>© 2026 PassKeeper</p>
-  <p style="font-size:12px">This app does not use Google APIs to create, distribute, or host AI NCII (AI-generated non-consensual intimate imagery) and does not claim any exemptions from this prohibition.</p>
+  <p style="font-size:12px">Это приложение не использует Google API для создания, распространения или размещения AI NCII (искусственно сгенерированных интимных изображений без согласия) и не претендует на исключения из этого запрета.</p>
 </footer>
 </body>
 </html>
