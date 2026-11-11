@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — PassKeeper</title>
-<meta name="description" content="PassKeeper privacy policy: data is stored locally and encrypted, sync happens through the user's own Google Drive.">
+<meta name="description" content="PassKeeper privacy policy: data is stored locally and encrypted, sync happens through the user's own Google Drive or Yandex Disk.">
 <link rel="icon" type="image/png" sizes="192x192" href="../icon.png">
 <link rel="alternate" hreflang="ru" href="https://pkeeper.ru/privacy.html">
 <link rel="alternate" hreflang="en" href="https://pkeeper.ru/en/privacy.html">
@@ -35,7 +35,7 @@
 <div class="wrap">
 <div class="lang"><a href="../privacy.html">RU</a> · <b>EN</b></div>
 <h1>Privacy Policy</h1>
-<p class="date">Effective November 7, 2026 · PassKeeper app (Android, Windows)</p>
+<p class="date">Effective November 12, 2026 · PassKeeper app (Android, Windows, macOS)</p>
 
 <p>This policy describes how the PassKeeper app (the "App") processes user data.
 In one sentence: <b>all your data stays with you</b> — the App has no servers of its
@@ -46,7 +46,7 @@ own and never collects or transmits your passwords or any other content to us.</
   <tr><th>Data</th><th>Collected by the developer?</th><th>How it is used</th></tr>
   <tr><td>Safe contents (passwords, logins, notes)</td><td>No</td><td>Stored only on the user's device, encrypted (AES)</td></tr>
   <tr><td>Master password</td><td>No</td><td>Never stored anywhere; known only to the user</td></tr>
-  <tr><td>Safe files on Google Drive</td><td>Not transmitted to the developer</td><td>By explicit user action: exchange happens only between the user's device and their own Drive (drive.file scope)</td></tr>
+  <tr><td>Safe files in the cloud (Google Drive or Yandex Disk)</td><td>Not transmitted to the developer</td><td>By explicit user action: exchange happens only between the user's device and their own cloud (Google — drive.file scope; Yandex — only the «PassKeeper» app folder)</td></tr>
   <tr><td>Analytics, ads, trackers, telemetry</td><td>No</td><td>Not present in the App</td></tr>
   <tr><td>Email address</td><td>No</td><td>Only if the user writes to support themselves</td></tr>
   <tr><td>Notification file from pkeeper.ru</td><td>No (no user data is transmitted)</td><td>On safe entry the App may request the emergency notification file — at most once per day; the server sees only the IP address and the request time</td></tr>
@@ -69,23 +69,30 @@ user data on its own resources.</p>
   <li><b>Mnemonic phrases</b> — generated and processed locally.</li>
 </ul>
 
-<h2>5. Sync via Google Drive</h2>
+<h2>5. Sync via Google Drive and Yandex Disk</h2>
 <p>The cloud safe feature works <b>only upon an explicit user action</b>
-(connecting a cloud safe). In that case the App:</p>
+(connecting a cloud safe). The user chooses the cloud storage themselves:
+Google Drive or Yandex Disk. In that case the App:</p>
 <ul>
-  <li>gets limited access to the user's Google Drive under the drive.file
-      permission: the App can access only the files and folders it created itself
+  <li><b>Google Drive</b>: gets limited access under the drive.file
+      permission — only to the files and folders it created itself
       to store the encrypted PassKeeper safes. The App cannot view, modify, or
       delete any of the user's other personal files on their Google Drive;</li>
+  <li><b>Yandex Disk</b>: gets access under the cloud_api:disk.app_folder
+      permission — only to the «PassKeeper» app folder on the user's Disk
+      (visible to the user in their Disk). The rest of the Disk's files are
+      not accessible and are not modified by the App;</li>
   <li>transfers encrypted safe files between the user's device and the user's own
-      Google Drive — <b>never to the operator's resources</b>;</li>
-  <li>uses Google data for no purpose other than providing the sync feature, and
-      complies with Google's
+      cloud — <b>never to the operator's resources</b>;</li>
+  <li>keeps access tokens only on the user's device (system secure storage);</li>
+  <li>uses Google and Yandex data for no purpose other than providing the sync
+      feature, and complies with Google's
       <a href="https://developers.google.com/terms/api-services-user-data-policy">API
-      Services User Data Policy</a> (limited use, no advertising transfer).</li>
+      Services User Data Policy</a> (limited use, no advertising transfer)
+      and Yandex's API rules.</li>
 </ul>
 <div class="note">Sync can be turned off at any time: switch the safe to local
-(from the safe card menu) or delete the cloud safe — the Drive file is also deleted
+(from the safe card menu) or delete the cloud safe — the cloud file is also deleted
 at the user's choice.</div>
 
 <h2>6. Android permissions</h2>
@@ -98,7 +105,7 @@ at the user's choice.</div>
       configurable timer.</li>
   <li><b>Internet access</b> — the only internet call the App makes without a
       user action: requesting the emergency notification file from the
-      pkeeper.ru website (see the summary in section 2); Google Drive access
+      pkeeper.ru website (see the summary in section 2); cloud access
       (section 5) happens only upon a user action.</li>
 </ul>
 
@@ -111,7 +118,8 @@ at the user's choice.</div>
 </ul>
 
 <h2>8. Data transfer to third parties</h2>
-<p>The only external system involved in processing is Google Drive (by explicit
+<p>The external systems involved in processing are the user's own cloud
+storages: Google Drive and Yandex Disk (by explicit user action, section 5).
 user action, section 3). Installation of the App may go through the RuStore
 store — data handling during installation follows the store's own rules.</p>
 
@@ -121,7 +129,7 @@ Age rating: Everyone (0+).</p>
 
 <h2>10. Storage and deletion</h2>
 <p>Users control all data themselves: deleting a safe or a card in the App removes
-the data irreversibly; cloud files are removed from the user's Google Drive by
+the data irreversibly; cloud files are removed from the user's cloud by
 choosing the corresponding menu option. The operator keeps no copies.</p>
 
 <h2>11. Changes to this policy</h2>
