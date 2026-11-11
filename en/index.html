@@ -50,6 +50,8 @@
                     font-size: 13.5px; text-align: left; }
   details.pp-note summary { cursor: pointer; color: var(--accent-2); }
   details.pp-note p { margin: 8px 0 0; }
+  .footnote { max-width: 620px; margin: 14px auto 0; color: var(--muted);
+              font-size: 13px; font-style: italic; }
   .btn-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
   .btn-secondary { background: transparent; color: var(--accent);
                    border: 2px solid var(--accent); padding: 12px 28px; }
@@ -118,7 +120,7 @@
       <p>Unlock your safe with a fingerprint — fast, no typing.</p></div>
     <div class="card"><h3>☁️ Sync via your own Drive</h3>
       <p>A cloud safe lives in your Google Drive folder: data travels between
-         your devices without touching the developer's servers.</p></div>
+         your devices without touching the developer's servers.<sup>*</sup></p></div>
     <div class="card"><h3>⚡ Quick copy</h3>
       <p>A shade notification copies your login or password with one tap,
          with automatic clipboard cleanup.</p></div>
@@ -135,6 +137,10 @@
       <p>Locks on a timer, when backgrounded, and when the screen turns off —
          your data is never left unattended.</p></div>
   </div>
+  <p class="footnote"><sup>*</sup> We strongly advise against keeping your
+     safes in multiple Google accounts: PassKeeper is designed to work with a
+     single Google Drive, and switching between accounts slows down sign-in
+     and can confuse synchronization.</p>
 
   <h2>Screenshots</h2>
   <div class="shots">
@@ -148,7 +154,11 @@
 
 <footer class="wrap">
   <p><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></p>
-  <p>Support: rapaev.vl@mail.ru · © 2026 PassKeeper</p>
+  <p>🛠 PassKeeper is under active development — updates ship regularly.
+     Found a bug or have a suggestion? Write to
+     <a href="mailto:rapaev.vl@mail.ru">rapaev.vl@mail.ru</a> — we read
+     every message.</p>
+  <p>© 2026 PassKeeper</p>
   <p style="font-size:12px">This app does not use Google APIs to create, distribute, or host AI NCII (AI-generated non-consensual intimate imagery) and does not claim any exemptions from this prohibition.</p>
 </footer>
 </body>
