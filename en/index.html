@@ -63,6 +63,17 @@
   }
   .card h3 { font-size: 17px; margin-bottom: 8px; }
   .card p { color: var(--muted); font-size: 14.5px; }
+  .card { position: relative; }
+  .card .info { position: absolute; top: 8px; right: 10px; width: 20px; height: 20px;
+                border-radius: 50%; border: 1.5px solid var(--accent); color: var(--accent);
+                display: flex; align-items: center; justify-content: center;
+                font-size: 12px; font-weight: 700; cursor: help; user-select: none;
+                line-height: 1; }
+  .card .tip { display: none; position: absolute; top: 32px; right: 8px; width: 250px;
+               background: var(--accent); color: #fff; padding: 10px 12px;
+               border-radius: 10px; font-size: 13px; line-height: 1.5; z-index: 5;
+               text-align: left; box-shadow: 0 6px 18px rgba(0,0,0,.25); }
+  .card .info:hover + .tip, .card .tip:hover { display: block; }
   .shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
   .shots img {
     width: 100%; border-radius: var(--radius); display: block;
@@ -94,7 +105,7 @@
     <a class="btn btn-secondary"
        href="https://github.com/rapaev1984/passkeeper-releases/releases/latest/download/PassKeeper-mac.dmg">Download for macOS</a>
   </div>
-  <p class="platforms">Windows v.1.11.2 · macOS v.1.1.2 · Android (RuStore)</p>
+  <p class="platforms">Android v.2.16.5 (RuStore) · Windows v.1.11.2 · macOS v.1.1.2</p>
   <details class="pp-note">
     <summary>If Google Play Protect shows a warning during installation</summary>
     <p>This is Android's standard screen for apps installed outside Google
@@ -125,27 +136,27 @@
 <main class="wrap">
   <h2>Features</h2>
   <div class="grid">
-    <div class="card"><h3>🔒 On-device encryption</h3>
+    <div class="card"><span class="info" title="Details">i</span><div class="tip">The safe is an encrypted database: AES-256-GCM, key derived from the master password (PBKDF2, 200,000 iterations). Every field — login, password, notes, mnemonic — is encrypted separately with a random IV and an authentication tag. The master password is stored nowhere: even the developer cannot recover your data without it.</div><h3>🔒 On-device encryption</h3>
       <p>A safe is an encrypted database (AES, key derived from your master
          password with PBKDF2). Nobody but you can decrypt the contents.</p></div>
-    <div class="card"><h3>🔐 Biometric unlock</h3>
+    <div class="card"><span class="info" title="Details">i</span><div class="tip">The master password is stored in the system secure storage (Android Keystore / Windows DPAPI), separately for each safe, and is unlocked only by a successful fingerprint scan. Biometrics are verified by the operating system itself — the app never sees your fingerprint. If the scan succeeds but the unlock fails (password changed on another device), the outdated key is wiped automatically.</div><h3>🔐 Biometric unlock</h3>
       <p>Unlock your safe with a fingerprint — fast, no typing.</p></div>
-    <div class="card"><h3>☁️ Sync via your own Google Drive or Yandex Disk</h3>
+    <div class="card"><span class="info" title="Details">i</span><div class="tip">A cloud safe travels only between your devices and your own cloud — there are no developer servers. The provider sees nothing but the encrypted file. Card-level merge combines changes from two devices without losses. Multi-account: each safe is bound to its own cloud account, with sign-in free of re-logins and an «another account» guard.</div><h3>☁️ Sync via your own Google Drive or Yandex Disk</h3>
       <p>A cloud safe lives in your Google Drive or Yandex Disk folder: data travels
          between your devices without touching the developer's servers.<sup>*</sup></p></div>
-    <div class="card"><h3>⚡ Quick copy</h3>
+    <div class="card"><span class="info" title="Details">i</span><div class="tip">When you open a card, a shade notification appears with «Copy login» and «Copy password» buttons — one tap, no need to enter the app. The clipboard is cleared after a configurable timer; on Android 13+ the password is masked in the clipboard UI.</div><h3>⚡ Quick copy</h3>
       <p>A shade notification copies your login or password with one tap,
          with automatic clipboard cleanup.</p></div>
-    <div class="card"><h3>🧠 Mnemonic passwords</h3>
+    <div class="card"><span class="info" title="Details">i</span><div class="tip">The generator builds a password from a coherent Russian phrase (dictionaries, ~10,000 words, no «ё»): subject, verb, object. First letters of the words, CamelCase and digits — easy to recall from the phrase, hard to brute-force. Configurable: number of words (2–5), letter slicing, capitals, leading digits.</div><h3>🧠 Mnemonic passwords</h3>
       <p>The generator invents a coherent phrase and turns it into a strong
          password — easy to remember, hard to crack.</p></div>
-    <div class="card"><h3>🗂 Folders, trash, CSV</h3>
+    <div class="card"><span class="info" title="Details">i</span><div class="tip">Folders with nesting and emoji icons, drag-and-drop card moving. Trash: deleted items are restored to their original folder. Import from browser password managers (Chrome, Firefox, etc.) via CSV.</div><h3>🗂 Folders, trash, CSV</h3>
       <p>Folders with emoji icons, trash with restore, import from browser
          password CSVs.</p></div>
-    <div class="card"><h3>🔄 Card transfer</h3>
+    <div class="card"><span class="info" title="Details">i</span><div class="tip">A QR code or a .pkshare file, encrypted with a transfer password (AES-256-GCM, PBKDF2): pass a card to another device directly, without any cloud. The transfer password is entered on both devices.</div><h3>🔄 Card transfer</h3>
       <p>QR code or a .pkshare file — move a password card to another
          device without the cloud.</p></div>
-    <div class="card"><h3>⏱ Auto-lock</h3>
+    <div class="card"><span class="info" title="Details">i</span><div class="tip">The safe locks: on a timer (1–5 minutes), when the app is backgrounded, and when the screen turns off (Android). Unlocking requires the password or biometrics again — your data is never left unattended.</div><h3>⏱ Auto-lock</h3>
       <p>Locks on a timer, when backgrounded, and when the screen turns off —
          your data is never left unattended.</p></div>
   </div>
@@ -170,7 +181,7 @@
      Found a bug or have a suggestion? Write to
      <a href="mailto:rapaev.vl@mail.ru">rapaev.vl@mail.ru</a> — we read
      every message.</p>
-  <p>© 2026 PassKeeper</p>
+  <p>© 2026 Vitaly Rapaev</p>
   <p style="font-size:12px">This app does not use Google APIs to create, distribute, or host AI NCII (AI-generated non-consensual intimate imagery) and does not claim any exemptions from this prohibition.</p>
 </footer>
 </body>
