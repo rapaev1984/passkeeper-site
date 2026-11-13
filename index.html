@@ -53,6 +53,7 @@
   .footnote { max-width: 620px; margin: 14px auto 0; color: var(--muted);
               font-size: 13px; font-style: italic; }
   .btn-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn-col { display: flex; flex-direction: column; gap: 12px; }
   .btn-secondary { background: transparent; color: var(--accent);
                    border: 2px solid var(--accent); padding: 12px 28px; }
   .btn-secondary:hover { background: rgba(79, 140, 255, .12); }
@@ -100,10 +101,12 @@
        например: https://apps.rustore.ru/app/ru.pkeeper.passkeeper -->
   <div class="btn-row">
     <a class="btn" href="#">Скачать в RuStore</a>
-    <a class="btn btn-secondary"
-       href="https://github.com/rapaev1984/passkeeper-releases/releases/latest/download/PassKeeper-windows.zip">Скачать для Windows - .zip</a>
-    <a class="btn btn-secondary"
-       href="https://github.com/rapaev1984/passkeeper-releases/releases/latest/download/PassKeeper-windows.msi">Скачать для Windows - .msi</a>
+    <div class="btn-col">
+      <a class="btn btn-secondary"
+         href="https://github.com/rapaev1984/passkeeper-releases/releases/latest/download/PassKeeper-windows.zip">Скачать для Windows - .zip</a>
+      <a class="btn btn-secondary"
+         href="https://github.com/rapaev1984/passkeeper-releases/releases/latest/download/PassKeeper-windows.msi">Скачать для Windows - .msi</a>
+    </div>
     <a class="btn btn-secondary"
        href="https://github.com/rapaev1984/passkeeper-releases/releases/latest/download/PassKeeper-mac.dmg">Скачать для macOS</a>
   </div>
