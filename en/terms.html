@@ -16,8 +16,8 @@
          background: var(--bg); color: var(--text); line-height: 1.7; }
   .wrap { max-width: 780px; margin: 0 auto; padding: 40px 20px; }
   .lang { text-align: right; font-size: 14px; margin-bottom: 18px; }
-  .lang a { color: var(--muted); text-decoration: none; padding: 6px 10px;
-            border: 1px solid #2a3550; border-radius: 999px; }
+  .lang select { background: var(--card); color: var(--text); font-size: 14px;
+            padding: 6px 12px; border: 1px solid #2a3550; border-radius: 999px; cursor: pointer; }
   h1 { font-size: 30px; margin-bottom: 6px; }
   .date { color: var(--muted); font-size: 14px; margin-bottom: 28px; }
   h2 { font-size: 20px; margin: 28px 0 10px; color: var(--accent); }
@@ -29,7 +29,7 @@
 </head>
 <body>
 <div class="wrap">
-<div class="lang"><a href="../terms.html">RU</a> · <b>EN</b></div>
+<div class="lang"><select onchange="if (this.value) location.href = this.value" aria-label="Language / Язык"><option value="" selected>EN — English</option><option value="../terms.html">RU — Русский</option></select></div>
 <h1>Terms of Service</h1>
 <p class="date">Effective November 7, 2026 · PassKeeper app (Android, Windows)</p>
 
