@@ -4,6 +4,8 @@
     "active": false,
     "title": "Информация",
     "text": "Уважаемый пользователь Passkeeper! Благодарю за установку приложения, желаю приятного использования, очень надеюсь, что поставите положительный отзыв в RuStore.",
-    "minVersion": ""
+    "minVersion": "",
+    "titleEn": "Information",
+    "textEn": "Dear PassKeeper user! Thank you for installing the app and enjoy using it — I would really appreciate a positive review in RuStore."
   }
 ]
